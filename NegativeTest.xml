@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeTestSuite" verbose="1">
+
+	<test name="NegativeUsernameTest">
+	<parameter name="username" value="incorrectusername"></parameter>
+	<parameter name="password" value="password61"></parameter>
+	<parameter name="expectedMessage" value="Username and password mismatch"></parameter>
+	<parameter name="broswer" value="ie"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.NegativeTest">
+            </class>
+		</classes>
+	</test>
+	
+	<test name="NegativePasswordTest">
+	<parameter name="username" value="bcfmanager"></parameter>
+	<parameter name="password" value="passwordWrong"></parameter>
+	<parameter name="expectedMessage" value="Username and password mismatch"></parameter>
+	<parameter name="broswer" value="chrome"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.NegativeTest">
+            </class>
+		</classes>
+	</test>
+</suite>
